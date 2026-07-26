@@ -1,0 +1,10 @@
+persistence:
+  size: 10Gi
+  storageClassName: registry-hostpath
+
+hostNetwork:
+  enabled: true
+
+persistentVolume:
+  enabled: true
+  nodeName: sandbox-server

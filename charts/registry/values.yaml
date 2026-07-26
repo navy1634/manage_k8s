@@ -1,0 +1,10 @@
+persistence:
+  size: 20Gi
+  storageClassName: ""
+
+hostNetwork:
+  enabled: false
+
+persistentVolume:
+  enabled: false
+  nodeName: ""

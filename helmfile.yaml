@@ -16,3 +16,9 @@ releases:
     version: 1.19.6
     values:
       - values/cilium.yml
+
+  - name: registry
+    namespace: registry
+    chart: ./charts/registry
+    values:
+      - values/registry-{{ requiredEnv "ENVIRONMENT" }}.yml
