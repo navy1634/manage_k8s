@@ -1,0 +1,19 @@
+operator:
+  replicas: 1
+
+hubble:
+  relay:
+    enabled: false
+  ui:
+    enabled: false
+
+ipam:
+  mode: cluster-pool
+  operator:
+    clusterPoolIPv4PodCIDRList:
+      - 10.0.0.0/16
+    clusterPoolIPv4MaskSize: 24
+
+cni:
+  install: true
+  exclusive: true

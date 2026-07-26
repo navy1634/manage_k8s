@@ -1,0 +1,18 @@
+repositories:
+  - name: cilium
+    url: https://helm.cilium.io/
+
+helmDefaults:
+  wait: true
+  waitForJobs: true
+  timeout: 600
+  createNamespace: false
+  atomic: true
+
+releases:
+  - name: cilium
+    namespace: kube-system
+    chart: cilium/cilium
+    version: 1.19.6
+    values:
+      - values/cilium.yml
