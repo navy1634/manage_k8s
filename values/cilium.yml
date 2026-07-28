@@ -1,5 +1,8 @@
 operator:
   replicas: 1
+  rollOutPods: true
+
+rollOutCiliumPods: true
 
 hubble:
   relay:
@@ -17,3 +20,19 @@ ipam:
 cni:
   install: true
   exclusive: true
+
+devices: eno1
+
+kubeProxyReplacement: true
+
+nodePort:
+  addresses:
+    - 192.168.0.100/32
+
+l2announcements:
+  enabled: true
+
+ingressController:
+  enabled: true
+  default: true
+  loadbalancerMode: shared

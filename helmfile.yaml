@@ -22,3 +22,9 @@ releases:
     chart: ./charts/registry
     values:
       - values/registry-{{ requiredEnv "ENVIRONMENT" }}.yml
+
+  - name: cilium-lb
+    namespace: kube-system
+    chart: ./charts/cilium-lb
+    needs:
+      - kube-system/cilium

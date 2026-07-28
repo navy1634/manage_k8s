@@ -1,0 +1,7 @@
+ipPool:
+  start: 192.168.0.240
+  stop: 192.168.0.250
+
+l2Announcement:
+  interfaces:
+    - ^eno1$
