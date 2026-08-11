@@ -6,7 +6,13 @@ helmfile = "latest"
 _.file = ".env"
 
 [tasks."render"]
-run = "helmfile template"
+run = '''ENVIRONMENT="$usage_env" helmfile template'''
+usage = '''
+arg "<env>"
+'''
 
 [tasks."apply"]
-run = "helmfile sync"
+run = '''ENVIRONMENT="$usage_env" helmfile sync'''
+usage = '''
+arg "<env>"
+'''
